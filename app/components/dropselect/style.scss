@@ -1,0 +1,110 @@
+$font-size: .3733rem;
+$title-font-color: #8a9399;
+$placeholder-color: #bbc3c8;
+$input-color: #475966;
+$input-border-color: #c7c7c7;
+$radio-border: 1px solid #ccc;
+$radio-active-border: 1px solid #ff017d;
+$select-color: #627c8f;
+.drop-select {
+    width: 100%;
+    height: 1.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: left;
+    -webkit-box-align: center;
+    position: relative;
+}
+.ds-title {
+    display: block;
+    width: 2rem;
+    inline-height: 1.4rem;
+    color: $title-font-color;
+    font-size: $font-size;
+}
+.ds-title > i {
+    font-style: normal;
+    color: #ff017d;
+}
+.ds-box {
+    display: block;
+    text-decoration: none;
+    font-size: normal;
+    flex: 1;
+    height: .96rem;
+}
+.ds-showvalue {
+    flex: 1;
+    height: .96rem;
+    line-height: .9067rem;
+    padding: 0 .2667rem;
+    font-size: $font-size;
+    color: $select-color;
+    border:1px solid $input-border-color;
+    border-radius: 6px;
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 99;
+}
+.ds-showvalue:after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid #ccc;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    -webkit-transition: all .4s;
+}
+.ds-showvalue.active {
+    border: $radio-active-border;
+}
+.ds-showvalue.active:after {
+    border-top: 7px solid #ff017d;
+    -webkit-transform: rotateZ(90deg);
+}
+.ds-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    padding: .1rem 0;
+    overflow-y: auto;
+    list-style: none;
+    background: #fff;
+    border: $radio-active-border;
+    box-sizing: border-box;
+    opacity: 1;
+    -webkit-animation: hideSelect .2s ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+.ds-select-item {
+    width: 100%;
+    height: .8rem;
+    padding: 0 .2667rem;
+    line-height: .8rem;
+    box-sizing: border-box;
+}
+.ds-select-item.active {
+    background: rgba(255, 1, 125, .5);
+    color: #fff;
+}
+.fade-enter {
+    opacity: 0;
+    transition: all .35s;
+}
+.fade-enter-active {
+    opacity: 1;
+}
+.fade-leave {
+    opacity: 1;
+    transition: all .35s;
+}
+.fade-leave-active {
+    opacity: 0;
+}

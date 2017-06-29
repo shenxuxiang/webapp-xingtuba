@@ -1,0 +1,42 @@
+$font-size: .3733rem;
+$title-font-color: #8a9399;
+$placeholder-color: #bbc3c8;
+$input-color: #475966;
+$input-border-color: #c7c7c7;
+$radio-border: 1px solid #ccc;
+$radio-active-border: 1px solid #ff017d;
+$select-color: #627c8f;
+
+.userRecomment {
+    width: 100%;
+    height: 2rem;
+    margin-top: .2667rem;
+    position: relative;
+    z-index: 2;
+}
+.ur-content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: .2667rem;
+    border: $radio-border;
+    border-radius: 6px;
+    line-height: 1.3;
+    font-family: inherit;
+    font-size: $font-size;
+    color: #627c8f;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0);
+    -webkit-appearance: none;
+    position: relative;
+    z-index: 100;
+}
+.ur-placeholder {
+    position: absolute;
+    top: .2667rem;
+    left: .2667rem;
+    font-size: $font-size;
+    color: $placeholder-color;
+    z-index: 1;
+}
+

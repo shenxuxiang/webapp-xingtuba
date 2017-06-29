@@ -1,0 +1,22 @@
+.info-list-content-box {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-bewteen;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+.info-list-cb-item {
+    width: 49%;
+    height: 5.96rem;
+    margin-top: .2667rem;
+}
+.info-list-cb-item:nth-child(2n) {
+    margin-left: 2%;
+}
+.info-list-cb-item:nth-child(1),
+.info-list-cb-item:nth-child(2) {
+    margin-top: 0;
+}
+

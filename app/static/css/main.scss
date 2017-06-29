@@ -1,0 +1,23 @@
+html {
+    font-size: 10vw;
+    -webkit-text-size-adjust:none;
+    -webkit-overflow-scrolling: touch;
+}
+body {
+    font-family: "Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei";
+    font-size: 0.32rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+*:focus {
+    outline: none;
+}
+#main-container {
+    position: relative;
+}
