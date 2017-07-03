@@ -7,9 +7,6 @@ let cancel = null
 let axiosConfig = {
     baseURL: apiRemote,
     timeout: 10000
-    // validateStatus: function (status) {
-    //     return status < 500 // 当status>= 500的时候才会 reject
-    // }
 }
 
 let sendRequest = (url, method, headers, sendData, isUpload) => {
@@ -38,4 +35,14 @@ let sendRequest = (url, method, headers, sendData, isUpload) => {
             console.log(error)
         })
     })
+}
+export default {
+    getInfoList (data) {
+        return sendRequest('/api/getlist', 'post', {
+            "Content-Type": "application/json; charset=utf-8"
+        }, data, true)
+    },
+    cancel () {
+        cancel && cancel()
+    }
 }

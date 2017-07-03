@@ -3,7 +3,7 @@ import React from 'react'
 import pureRenderMixin from 'react-addons-pure-render-mixin'
 import ImageLayout from '../../components/imagelayout'
 import LoadMore from '../../components/loadmore'
-
+import apis from '../../common/apis.js'
 export default
 class Model extends React.Component {
     constructor () {
@@ -117,6 +117,12 @@ class Model extends React.Component {
         this.setState({
             currentStatus: 'isLoading'
         })
+        // apis.getInfoList({
+        //     page: 1,
+        //     count: 10
+        // }).then(resp => {
+        //     console.log(resp)
+        // })
         this.times = setTimeout(() => {
             this.setState({
                 infoList: this.state.infoList.concat(this.state.infoListOne),
