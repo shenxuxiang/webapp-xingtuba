@@ -7,8 +7,7 @@ class Root extends React.Component {
         super()
         this.state = {
             initDone: false,
-            ori: '',
-            winWidth: ''
+            ori: ''
         }
         this.orientationChange = this.orientationChange.bind(this)
         this.getWindowWidth = this.getWindowWidth.bind(this)
