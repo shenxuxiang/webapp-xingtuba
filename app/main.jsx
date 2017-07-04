@@ -37,6 +37,10 @@ class Root extends React.Component {
         } else if (window.orientation === 0) {
             winWidth = document.documentElement.clientWidth
         }
+        if (navigator.userAgent.indexOf("UCBrowser") !== -1) {
+            document.documentElement.style.fontSize = '' + (window.screen.width / 10) + 'px'
+            return
+        }
         document.documentElement.style.fontSize = '' + (winWidth / 10) + 'px'
     }
     componentWillUnmount () {
